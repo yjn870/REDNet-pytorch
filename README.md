@@ -61,12 +61,11 @@ When training begins, the model weights will be saved every epoch. <br />
 If you want to train quickly, you should use **--use_fast_loader** option.
 
 ```bash
-python main.py --num_metrics 8 \
-               --structure_type "advanced" \  # classic, advanced
+python main.py --arch "REDNet30" \  # REDNet10, REDNet20, REDNet30               
                --images_dir "" \
                --outputs_dir "" \
                --jpeg_quality 10 \
-               --patch_size 48 \
+               --patch_size 50 \
                --batch_size 16 \
                --num_epochs 20 \
                --lr 1e-4 \
@@ -80,8 +79,7 @@ python main.py --num_metrics 8 \
 Output results consist of image compressed with JPEG and image with artifacts reduced.
 
 ```bash
-python example --num_metrics 8 \
-               --structure_type "advanced" \  # classic, advanced
+python example --arch "REDNet30" \  # REDNet10, REDNet20, REDNet30
                --weights_path "" \
                --image_path "" \
                --outputs_dir "" \
